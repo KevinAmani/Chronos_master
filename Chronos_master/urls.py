@@ -16,12 +16,12 @@ Including another URLconf
 """
 from django.conf.urls import url
  
-from . import view,testdb,search_data
+from . import view,testdb,message
  
 urlpatterns = [
     #url(r'^$', view.hello),
-	url(r'^test$',testdb.testdb),
-	url(r'^search',search_data.search_post),
-	url(r'^message',search_data.search_message),
-	
+	#url(r'^test',testdb.testdb),
+	url(r'^message',message.the_message),
+	url(r'^team',view.Team_data),
+	url(r'^schedule',view.Schedule_data),
 ]
